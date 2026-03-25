@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { PlayCircle, CheckCircle2, Lock, ChevronRight, Award, Clock } from 'lucide-react';
 import Link from 'next/link';
 import Button from '@/components/ui/Button';
+import DashboardUpgradeBanner from '@/components/DashboardUpgradeBanner';
 
 export default function Dashboard() {
   const sections = [
@@ -62,6 +63,8 @@ export default function Dashboard() {
             </div>
           </div>
         </header>
+
+        <DashboardUpgradeBanner />
 
         <div className="grid lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2 space-y-10">

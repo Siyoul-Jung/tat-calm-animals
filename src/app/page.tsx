@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import VideoSection from "@/components/VideoSection";
+import HealingLoop from "@/components/HealingLoop";
 import Pricing from "@/components/Pricing";
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
     <div className="flex flex-col">
       <Hero />
       <VideoSection />
+      <HealingLoop />
       <Pricing />
       
       {/* Footer Placeholder */}
