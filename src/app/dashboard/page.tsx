@@ -3,6 +3,7 @@
 
 import { motion } from 'framer-motion';
 import { PlayCircle, CheckCircle2, Lock, ChevronRight, Award, Clock } from 'lucide-react';
+import Link from 'next/link';
 import Button from '@/components/ui/Button';
 
 export default function Dashboard() {
@@ -43,6 +44,11 @@ export default function Dashboard() {
       <div className="max-w-7xl mx-auto px-6">
         <header className="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div>
+            <div className="flex items-center gap-2 mb-4 text-xs font-bold uppercase tracking-widest text-brand/60">
+               <Link href="/" className="hover:text-brand transition-colors">Home</Link>
+               <ChevronRight size={12} />
+               <span>Practice Hub</span>
+            </div>
             <h1 className="text-4xl font-bold text-charcoal mb-2">Practice Hub</h1>
             <p className="text-charcoal/60 text-lg">Welcome back. Continue your healing journey today.</p>
           </div>
