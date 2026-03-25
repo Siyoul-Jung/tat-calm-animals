@@ -73,7 +73,7 @@ export default function Navbar() {
             href="/membership"
             className="bg-brand text-cream px-5 py-2 rounded-full text-sm font-semibold hover:bg-brand/90 transition-all hover:shadow-lg active:scale-95"
           >
-            Join Now
+            Membership
           </Link>
         </div>
 
