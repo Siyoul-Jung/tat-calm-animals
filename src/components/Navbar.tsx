@@ -13,9 +13,6 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
 
-  // Don't show Navbar on session page for immersive experience
-  if (pathname === '/session') return null;
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -31,6 +28,8 @@ export default function Navbar() {
     { name: 'Find a Pro', href: '/find-a-pro' },
     { name: 'Certification', href: '/certification' },
   ];
+
+  if (pathname === '/session') return null;
 
   return (
     <nav
