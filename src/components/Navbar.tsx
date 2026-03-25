@@ -3,6 +3,7 @@
 
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Heart, User, ShoppingBag } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -10,6 +11,10 @@ import { cn } from '@/lib/utils';
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  // Don't show Navbar on session page for immersive experience
+  if (pathname === '/session') return null;
 
   useEffect(() => {
     const handleScroll = () => {
