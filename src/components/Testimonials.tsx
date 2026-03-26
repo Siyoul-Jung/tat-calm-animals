@@ -58,7 +58,7 @@ export default function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.15, type: 'spring', stiffness: 50 }}
-              className="group p-1 bg-white hover:bg-gradient-to-br hover:from-brand/20 hover:to-brand/5 rounded-[4rem] transition-all duration-700 shadow-[0_20px_50px_rgba(0,0,0,0.04)] hover:shadow-[0_40px_80px_-20px_rgba(244,114,22,0.15)]"
+              className="group p-1 bg-white hover:bg-gradient-to-br hover:from-brand/20 hover:to-brand/5 rounded-[4rem] transition-all duration-700 shadow-[0_10px_30px_rgba(0,0,0,0.05)] md:shadow-none hover:shadow-[0_40px_80px_-20px_rgba(244,114,22,0.15)] border border-brand/5"
             >
               <div className="bg-white h-full p-12 rounded-[3.8rem] flex flex-col">
                 <blockquote className="text-xl text-charcoal/80 mb-10 leading-relaxed italic flex-grow relative">

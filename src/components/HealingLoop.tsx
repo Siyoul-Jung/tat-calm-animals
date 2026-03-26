@@ -52,7 +52,7 @@ export default function HealingLoop() {
           </motion.div>
 
           {/* Central Connecting Loop - Responsive Energy Flow */}
-          <div className="relative w-40 h-40 md:w-80 md:h-32 flex items-center justify-center">
+          <div className="relative w-32 h-64 md:w-80 md:h-32 flex items-center justify-center">
             <div className="absolute inset-0 overflow-hidden rounded-full">
                <EnergyFlow color="#F47216" particleCount={60} />
             </div>
@@ -76,8 +76,8 @@ export default function HealingLoop() {
 
           {/* Human Side */}
           <motion.div 
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="flex flex-col items-center text-center max-w-sm flex-1"
           >
@@ -99,12 +99,13 @@ export default function HealingLoop() {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-32 p-12 rounded-[5rem] bg-gradient-to-br from-brand/10 to-transparent border border-brand/20 text-center max-w-4xl mx-auto shadow-inner relative group"
+          className="mt-20 md:mt-32 p-8 md:p-12 rounded-[4rem] md:rounded-[5rem] bg-gradient-to-br from-brand/10 to-transparent border border-brand/20 text-center max-w-4xl mx-auto shadow-inner relative group"
         >
-           <div className="absolute inset-0 bg-white/40 backdrop-blur-xl rounded-[5rem] -z-10" />
+           <div className="absolute inset-0 bg-white/40 backdrop-blur-xl rounded-[4rem] md:rounded-[5rem] -z-10" />
            <Sparkles className="text-brand w-10 h-10 mx-auto mb-8 animate-bounce" />
-           <p className="text-3xl italic text-charcoal tracking-tight font-medium leading-tight px-12">
-             &ldquo;When they are calm, <span className="text-brand not-italic font-bold tracking-tighter uppercase whitespace-nowrap">you are free</span>. When you are calm, they feel safe.&rdquo;
+           <p className="text-xl md:text-3xl italic text-charcoal tracking-tight font-medium leading-relaxed md:leading-tight px-4 md:px-12 flex flex-col md:block gap-2">
+             <span>&ldquo;When they are calm, <span className="text-brand not-italic font-bold tracking-tighter uppercase">you are free</span>.&rdquo;</span>
+             <span className="md:ml-2">When you are calm, they feel safe.</span>
            </p>
         </motion.div>
       </div>
