@@ -3,12 +3,15 @@ import VideoSection from "@/components/VideoSection";
 import HealingLoop from "@/components/HealingLoop";
 import Pricing from "@/components/Pricing";
 
+import Testimonials from "@/components/Testimonials";
+
 export default function Home() {
   return (
     <div className="flex flex-col">
       <Hero />
       <VideoSection />
       <HealingLoop />
+      <Testimonials />
       <Pricing />
       
       {/* Footer Placeholder */}

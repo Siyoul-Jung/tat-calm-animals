@@ -9,29 +9,29 @@ import Button from '@/components/ui/Button';
 export default function Pricing() {
   const tiers = [
     {
-      name: 'Self-Guided',
+      name: 'The Home Practice',
       price: '$24',
-      description: 'Ideal for those who want to practice at their own pace.',
+      description: 'Quiet, independent space for your daily ritual of calm.',
       features: [
         'Full Course Library',
         'Practice Dashboard',
         'Community Access',
         'Progress Tracking'
       ],
-      cta: 'Start Self-Guided',
+      cta: 'Start Your Practice',
       popular: false
     },
     {
-      name: 'Supported',
+      name: 'The Guided Circle',
       price: '$59',
-      description: 'The complete experience with live guidance from Tapas.',
+      description: 'Direct connection and weekly live support for profound healing.',
       features: [
-        'Everything in Self-Guided',
+        'Everything in Home Practice',
         'Weekly Live Sessions',
         'Direct Q&A with Tapas',
         'Priority Support'
       ],
-      cta: 'Join Supported',
+      cta: 'Join The Circle',
       popular: true
     }
   ];
@@ -85,7 +85,7 @@ export default function Pricing() {
                 ))}
               </div>
 
-                <Link href="/membership" className="w-full">
+                <Link href="/thank-you" className="w-full">
                   <Button 
                     variant={tier.popular ? "primary" : "outline"} 
                     className={`w-full ${tier.popular ? 'bg-brand text-cream border-brand' : 'border-brand text-brand hover:bg-brand/5'}`}

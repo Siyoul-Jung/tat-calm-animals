@@ -87,7 +87,13 @@ export default function VideoSection() {
               <p className="text-charcoal/70 mb-6 leading-relaxed">
                 Join our membership to access a full library of specific sessions for different animal conditions and yourself.
               </p>
-              <Button className="w-full" size="lg">Unlock the Full Library</Button>
+              <Button 
+                className="w-full" 
+                size="lg"
+                onClick={() => document.getElementById('membership')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                Unlock the Full Library
+              </Button>
             </motion.div>
           </div>
         </div>

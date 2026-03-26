@@ -51,18 +51,32 @@ export default function Navbar() {
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              className={cn(
-                'text-sm font-medium transition-colors hover:text-brand',
-                link.primary ? 'text-brand font-bold' : 'text-charcoal/70'
-              )}
-            >
-              {link.name}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            const isComingSoon = link.href === '/find-a-pro' || link.href === '/certification';
+            
+            return (
+              <Link
+                key={link.name}
+                href={isComingSoon ? '#' : link.href}
+                onClick={(e) => {
+                  if (isComingSoon) {
+                    e.preventDefault();
+                    alert(`${link.name} is coming in Phase 2! We're focusing on the core experience first.`);
+                  }
+                }}
+                className={cn(
+                  'text-sm font-medium transition-all hover:text-brand relative py-1',
+                  pathname === link.href 
+                    ? 'text-brand font-bold' 
+                    : 'text-charcoal/70',
+                  pathname === link.href && "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-brand after:rounded-full",
+                  isComingSoon && "cursor-help opacity-40 hover:opacity-100"
+                )}
+              >
+                {link.name}
+              </Link>
+            );
+          })}
         </div>
 
         {/* Action Icons */}
@@ -97,7 +111,7 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="absolute top-full left-0 right-0 bg-cream shadow-xl p-6 md:hidden flex flex-col gap-4 border-t border-sage-light"
+            className="absolute top-full left-0 right-0 bg-cream shadow-xl p-6 md:hidden flex flex-col gap-4 border-t border-brand/10"
           >
             {navLinks.map((link) => (
               <Link
@@ -105,21 +119,21 @@ export default function Navbar() {
                 href={link.href}
                 onClick={() => setIsMobileMenuOpen(false)}
                 className={cn(
-                  'text-lg font-medium py-2',
-                  link.primary ? 'text-sage' : 'text-charcoal/80'
+                  'text-lg font-medium py-2 transition-colors',
+                  pathname === link.href ? 'text-brand font-bold' : 'text-charcoal/80'
                 )}
               >
                 {link.name}
               </Link>
             ))}
-            <hr className="border-sage-light my-2" />
+            <hr className="border-brand/10 my-2" />
             <div className="flex items-center justify-between pt-2">
               <button className="flex items-center gap-2 text-charcoal/70">
                 <User size={20} /> Account
               </button>
               <Link
                 href="/membership"
-                className="bg-sage text-cream px-6 py-2 rounded-full font-semibold"
+                className="bg-brand text-cream px-6 py-2 rounded-full font-semibold"
               >
                 Join Now
               </Link>

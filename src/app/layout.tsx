@@ -14,9 +14,11 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "TAT® Calm for Animals (and You) | Healing for Them, Peace for You",
+  title: "TAT® Calm for Animals (and You) | The Relationship-Driven Way to Heal",
   description: "Experience the calming power of TAT for your animals and yourself. Experience first, simplicity always.",
 };
+
+import { Suspense } from "react";
 
 export default function RootLayout({
   children,
@@ -28,10 +30,12 @@ export default function RootLayout({
       lang="en"
       className={`${outfit.variable} ${inter.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans bg-cream text-charcoal selection:bg-sage/20">
+      <body className="min-h-full flex flex-col font-sans bg-cream text-charcoal selection:bg-brand/20">
         <Navbar />
         <main className="flex-grow">
-          {children}
+          <Suspense fallback={<div className="min-h-screen bg-cream" />}>
+            {children}
+          </Suspense>
         </main>
       </body>
     </html>

@@ -3,6 +3,7 @@
 
 import { motion } from 'framer-motion';
 import { Heart, Wind, Sparkles, Footprints } from 'lucide-react';
+import EnergyFlow from './EnergyFlow';
 
 export default function HealingLoop() {
   return (
@@ -15,12 +16,13 @@ export default function HealingLoop() {
           </p>
         </div>
 
-        <div className="relative flex flex-col md:flex-row items-center justify-center gap-12 md:gap-24">
+        <div className="relative flex flex-col md:flex-row items-center justify-center gap-6 md:gap-24">
           {/* Animal Side */}
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            className="flex flex-col items-center text-center max-w-xs"
+            viewport={{ once: true }}
+            className="flex flex-col items-center text-center max-w-xs flex-1"
           >
             <div className="w-24 h-24 bg-brand/10 rounded-full flex items-center justify-center mb-6 relative group">
               <Footprints className="text-brand w-10 h-10 group-hover:scale-110 transition-transform" />
@@ -34,48 +36,28 @@ export default function HealingLoop() {
             <p className="text-sm text-charcoal/50">Heart rate slows, muscles soften, and anxiety dissolves.</p>
           </motion.div>
 
-          {/* Central Connecting Loop */}
-          <div className="relative w-full max-w-[200px] h-32 flex items-center justify-center">
-            <svg className="absolute inset-0 w-full h-full overflow-visible" viewBox="0 0 200 100">
-               {/* Animated Loop Line */}
-               <motion.path 
-                 d="M 10,50 Q 100,0 190,50 Q 100,100 10,50"
-                 fill="none"
-                 stroke="url(#gradient)"
-                 strokeWidth="4"
-                 strokeLinecap="round"
-                 initial={{ pathLength: 0, opacity: 0 }}
-                 whileInView={{ pathLength: 1, opacity: 1 }}
-                 transition={{ duration: 2, ease: "easeInOut" }}
-               />
-               <defs>
-                 <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                   <stop offset="0%" stopColor="#D68A67" />
-                   <stop offset="100%" stopColor="#D68A67" stopOpacity="0.2" />
-                 </linearGradient>
-               </defs>
-               
-               {/* Pulsing Particle */}
-               <motion.circle
-                 r="4"
-                 fill="#D68A67"
-                 animate={{ 
-                   offsetDistance: ["0%", "100%"],
-                 }}
-                 transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-                 style={{ offsetPath: "path('M 10,50 Q 100,0 190,50 Q 100,100 10,50')" }}
-               />
-            </svg>
-            <div className="relative z-10 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center">
-               <Heart className="w-6 h-6 text-brand fill-brand" />
+          {/* Central Connecting Loop - Responsive Energy Flow */}
+          <div className="relative w-32 h-32 md:w-64 md:h-24 flex items-center justify-center">
+            <div className="absolute inset-0 overflow-hidden">
+              <EnergyFlow color="#D68A67" particleCount={50} />
             </div>
+            
+            {/* Pulsing Core */}
+            <motion.div 
+              animate={{ scale: [1, 1.1, 1], opacity: [0.8, 1, 0.8] }}
+              transition={{ duration: 2, repeat: Infinity }}
+              className="relative z-10 w-14 h-14 bg-white rounded-full shadow-xl flex items-center justify-center border border-brand/10"
+            >
+               <Heart className="w-7 h-7 text-brand fill-brand" />
+            </motion.div>
           </div>
 
           {/* Human Side */}
           <motion.div 
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            className="flex flex-col items-center text-center max-w-xs"
+            viewport={{ once: true }}
+            className="flex flex-col items-center text-center max-w-xs flex-1"
           >
             <div className="w-24 h-24 bg-brand/10 rounded-full flex items-center justify-center mb-6 relative group">
               <Wind className="text-brand w-10 h-10 group-hover:scale-110 transition-transform" />

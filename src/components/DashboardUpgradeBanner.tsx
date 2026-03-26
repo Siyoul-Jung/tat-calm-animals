@@ -20,7 +20,7 @@ export default function DashboardUpgradeBanner() {
             <div>
               <h3 className="text-xl font-bold mb-1">Unlock Weekly Live Support</h3>
               <p className="text-cream/80 text-sm max-w-md">
-                Upgrade to the <span className="font-bold text-white">Supported</span> Tier to join live sessions with Tapas and the global community.
+                Upgrade to the <span className="font-bold text-white">The Guided Circle</span> to join live sessions with Tapas and the global community.
               </p>
             </div>
           </div>
