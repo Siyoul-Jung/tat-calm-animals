@@ -103,9 +103,14 @@ export default function HealingLoop() {
         >
            <div className="absolute inset-0 bg-white/40 backdrop-blur-xl rounded-[4rem] md:rounded-[5rem] -z-10" />
            <Sparkles className="text-brand w-10 h-10 mx-auto mb-8 animate-bounce" />
-           <p className="text-xl md:text-3xl italic text-charcoal tracking-tight font-medium leading-relaxed md:leading-tight px-4 md:px-12 flex flex-col md:block gap-2">
-             <span>&ldquo;When they are calm, <span className="text-brand not-italic font-bold tracking-tighter uppercase">you are free</span>.&rdquo;</span>
-             <span className="md:ml-2">When you are calm, they feel safe.</span>
+           <p className="text-xl md:text-3xl italic text-charcoal tracking-tight font-medium leading-relaxed md:leading-tight px-6 md:px-12 flex flex-col items-center gap-1 md:block">
+             <span className="md:inline">When they are calm, </span>
+             <span className="text-brand not-italic font-bold tracking-tighter uppercase whitespace-nowrap md:inline inline-block mb-3 md:mb-0">
+               you are free.
+             </span>
+             <br className="md:hidden" />
+             <span className="md:inline md:ml-2">When you are calm, </span>
+             <span className="md:inline inline-block">they feel safe.</span>
            </p>
         </motion.div>
       </div>
