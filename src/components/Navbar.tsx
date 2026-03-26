@@ -34,18 +34,18 @@ export default function Navbar() {
   return (
     <nav
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 py-4',
-        isScrolled ? 'bg-cream/80 backdrop-blur-md shadow-sm py-3' : 'bg-transparent'
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-500 px-6 py-4',
+        isScrolled ? 'bg-white/70 backdrop-blur-xl shadow-[0_8px_32px_rgba(244,114,22,0.08)] py-3 border-b border-brand/5' : 'bg-transparent'
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-10 h-10 bg-brand rounded-full flex items-center justify-center text-cream transition-transform group-hover:scale-110">
-            <Heart size={20} fill="currentColor" />
+          <div className="w-11 h-11 bg-brand rounded-2xl flex items-center justify-center text-cream shadow-lg shadow-brand/20 transition-all group-hover:scale-110 group-hover:rotate-3">
+            <Heart size={22} fill="currentColor" />
           </div>
-          <span className="text-xl font-semibold tracking-tight text-charcoal">
-            TAT<span className="font-light">®</span> Calm
+          <span className="text-2xl font-bold tracking-tighter text-charcoal font-outfit uppercase">
+            TAT<span className="text-brand font-light">®</span> Calm
           </span>
         </Link>
 
@@ -65,12 +65,12 @@ export default function Navbar() {
                   }
                 }}
                 className={cn(
-                  'text-sm font-medium transition-all hover:text-brand relative py-1',
+                  'text-sm font-bold transition-all hover:text-brand relative py-1 tracking-wide',
                   pathname === link.href 
-                    ? 'text-brand font-bold' 
-                    : 'text-charcoal/70',
-                  pathname === link.href && "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-brand after:rounded-full",
-                  isComingSoon && "cursor-help opacity-40 hover:opacity-100"
+                    ? 'text-brand' 
+                    : 'text-charcoal/60 hover:text-charcoal',
+                  pathname === link.href && "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-1 after:bg-gradient-to-r after:from-brand after:to-brand-light after:rounded-full",
+                  isComingSoon && "cursor-help opacity-30 hover:opacity-100"
                 )}
               >
                 {link.name}

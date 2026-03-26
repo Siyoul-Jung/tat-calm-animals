@@ -8,41 +8,46 @@ import Link from 'next/link';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden bg-cream">
-      {/* Background Decor */}
-      <div className="absolute top-[-10%] right-[-10%] w-[50%] h-[50%] bg-brand-light/30 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-[-10%] left-[-10%] w-[40%] h-[40%] bg-brand-light/20 rounded-full blur-3xl" />
+    <section className="relative min-h-[90vh] flex items-center pt-32 pb-20 overflow-hidden bg-gradient-to-br from-cream via-white to-brand/5">
+      {/* Dynamic Background Decor */}
+      <div className="absolute top-[-10%] right-[-10%] w-[60%] h-[60%] bg-brand/10 rounded-full blur-[120px] animate-pulse" />
+      <div className="absolute bottom-[-10%] left-[-10%] w-[50%] h-[50%] bg-brand/5 rounded-full blur-[100px]" />
 
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
+      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center relative z-10">
         {/* Text Content */}
         <motion.div
-          initial={{ opacity: 0, x: -30 }}
+          initial={{ opacity: 0, x: -40 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: 'easeOut' }}
+          transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+          className="text-center lg:text-left pt-10 lg:pt-0"
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-brand/10 text-brand rounded-full text-xs font-bold tracking-wider uppercase mb-6">
+          <div className="inline-flex items-center gap-3 px-4 py-2 bg-brand/10 text-brand rounded-full text-[10px] sm:text-xs font-bold tracking-[0.2em] uppercase mb-8 shadow-sm">
             <span className="w-2 h-2 bg-brand rounded-full animate-ping" />
-            Experience First, Simplicity Always
+            Vibrant Health, Expert Vision
           </div>
-          <h1 className="text-5xl md:text-7xl font-semibold leading-[1.1] text-charcoal mb-6">
-            Healing for <span className="text-brand italic">Them</span>,<br />
-            Peace for <span className="text-brand italic">You</span>.
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.1] text-charcoal mb-8 tracking-tighter">
+            Healing for <br />
+            <span className="text-brand italic serif font-normal drop-shadow-sm">Them</span>, 
+            Peace for <br />
+            <span className="text-brand italic serif font-normal drop-shadow-sm">You.</span>
           </h1>
-          <p className="text-xl text-charcoal/70 mb-10 max-w-lg leading-relaxed">
+          <p className="text-lg sm:text-xl lg:text-2xl text-charcoal/60 mb-12 max-w-xl mx-auto lg:mx-0 leading-relaxed font-medium">
             Experience the calming power of TAT®. Start with a 2-minute signature session for your animal, and feel the relief yourself.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 items-center">
+          <div className="flex flex-col sm:flex-row gap-6 items-center">
             <Link href="/session">
-              <Button size="lg" className="group">
+              <Button size="lg" className="group px-10 py-8 text-lg font-bold shadow-xl shadow-brand/20 hover:scale-105 transition-all">
                 Help Your Pet Find Calm
-                <MousePointer2 className="ml-2 w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                <MousePointer2 className="ml-3 w-6 h-6 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
               </Button>
             </Link>
             <button 
               onClick={() => document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' })}
-              className="flex items-center gap-2 text-charcoal/80 font-medium hover:text-brand transition-colors px-4 py-3 group"
+              className="flex items-center gap-3 text-charcoal/60 font-bold hover:text-brand transition-colors px-6 py-4 group text-lg"
             >
-              <PlayCircle className="w-6 h-6 group-hover:scale-110 transition-transform" />
+              <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md group-hover:shadow-lg transition-all group-hover:scale-110">
+                 <PlayCircle className="w-8 h-8 text-brand fill-brand/10" />
+              </div>
               Watch How It Works
             </button>
           </div>

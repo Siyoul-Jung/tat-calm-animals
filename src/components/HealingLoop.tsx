@@ -7,48 +7,70 @@ import EnergyFlow from './EnergyFlow';
 
 export default function HealingLoop() {
   return (
-    <section className="py-24 bg-white overflow-hidden">
+    <section className="py-24 md:py-40 bg-white relative overflow-hidden">
+      {/* Decorative Brand Accent */}
+      <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-brand/5 rounded-full blur-[120px] -z-10 -translate-y-1/2 -translate-x-1/2" />
+      <div className="absolute top-1/2 right-0 w-[400px] h-[400px] bg-brand/10 rounded-full blur-[100px] -z-10 -translate-y-1/2 translate-x-1/2" />
+
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">The Mirror of Calm</h2>
-          <p className="text-charcoal/60 max-w-xl mx-auto">
-            Experience the profound connection: as your animal releases stress, your own nervous system finds deep, reflected peace.
+        <div className="text-center mb-20 md:mb-28">
+           <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="inline-flex items-center gap-2 px-4 py-2 bg-brand/10 text-brand rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-8"
+          >
+            <Sparkles size={14} className="fill-brand" />
+            <span>The Mirror of Calm</span>
+          </motion.div>
+          <h2 className="text-4xl md:text-5xl font-bold text-charcoal mb-8 tracking-tight leading-tight">
+            Healing is <br/><span className="text-brand italic serif font-normal text-5xl md:text-6xl">Contagious.</span>
+          </h2>
+          <p className="text-lg md:text-xl text-charcoal/60 max-w-xl mx-auto leading-relaxed">
+            Experience the profound resonance: as your animal releases stress, your own nervous system finds deep, reflected peace.
           </p>
         </div>
 
-        <div className="relative flex flex-col md:flex-row items-center justify-center gap-6 md:gap-24">
+        <div className="relative flex flex-col md:flex-row items-center justify-center gap-12 md:gap-32">
           {/* Animal Side */}
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="flex flex-col items-center text-center max-w-xs flex-1"
+            className="flex flex-col items-center text-center max-w-sm flex-1"
           >
-            <div className="w-24 h-24 bg-brand/10 rounded-full flex items-center justify-center mb-6 relative group">
-              <Footprints className="text-brand w-10 h-10 group-hover:scale-110 transition-transform" />
+            <div className="w-32 h-32 bg-brand/5 rounded-[3rem] flex items-center justify-center mb-10 relative group border border-brand/10">
+              <Footprints className="text-brand w-12 h-12 group-hover:scale-110 transition-transform" />
               <motion.div 
-                animate={{ scale: [1, 1.2, 1] }} 
-                transition={{ duration: 3, repeat: Infinity }}
-                className="absolute inset-0 rounded-full border-2 border-brand/20" 
+                animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.6, 0.3] }} 
+                transition={{ duration: 4, repeat: Infinity }}
+                className="absolute -inset-4 rounded-full border-2 border-brand/20 blur-sm" 
               />
             </div>
-            <h4 className="text-xl font-bold mb-2">Animal Relief</h4>
-            <p className="text-sm text-charcoal/50">Heart rate slows, muscles soften, and anxiety dissolves.</p>
+            <h4 className="text-3xl font-bold mb-4 text-charcoal">Animal Relief</h4>
+            <p className="text-lg text-charcoal/60 leading-relaxed font-medium italic">Heart rate slows, muscles soften, and anxiety dissolves into peace.</p>
           </motion.div>
 
           {/* Central Connecting Loop - Responsive Energy Flow */}
-          <div className="relative w-32 h-32 md:w-64 md:h-24 flex items-center justify-center">
-            <div className="absolute inset-0 overflow-hidden">
-              <EnergyFlow color="#D68A67" particleCount={50} />
+          <div className="relative w-40 h-40 md:w-80 md:h-32 flex items-center justify-center">
+            <div className="absolute inset-0 overflow-hidden rounded-full">
+               <EnergyFlow color="#F47216" particleCount={60} />
             </div>
             
             {/* Pulsing Core */}
             <motion.div 
-              animate={{ scale: [1, 1.1, 1], opacity: [0.8, 1, 0.8] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className="relative z-10 w-14 h-14 bg-white rounded-full shadow-xl flex items-center justify-center border border-brand/10"
+              animate={{ 
+                scale: [1, 1.15, 1],
+                boxShadow: [
+                  "0 0 20px rgba(244,114,22,0.1)",
+                  "0 0 40px rgba(244,114,22,0.3)",
+                  "0 0 20px rgba(244,114,22,0.1)"
+                ]
+              }}
+              transition={{ duration: 3, repeat: Infinity }}
+              className="relative z-10 w-20 h-20 bg-white rounded-full shadow-2xl flex items-center justify-center border-4 border-brand/10"
             >
-               <Heart className="w-7 h-7 text-brand fill-brand" />
+               <Heart className="w-10 h-10 text-brand fill-brand" />
             </motion.div>
           </div>
 
@@ -57,28 +79,34 @@ export default function HealingLoop() {
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="flex flex-col items-center text-center max-w-xs flex-1"
+            className="flex flex-col items-center text-center max-w-sm flex-1"
           >
-            <div className="w-24 h-24 bg-brand/10 rounded-full flex items-center justify-center mb-6 relative group">
-              <Wind className="text-brand w-10 h-10 group-hover:scale-110 transition-transform" />
+            <div className="w-32 h-32 bg-brand/5 rounded-[3rem] flex items-center justify-center mb-10 relative group border border-brand/10">
+              <Wind className="text-brand w-12 h-12 group-hover:scale-110 transition-transform" />
               <motion.div 
-                animate={{ scale: [1, 1.3, 1] }} 
-                transition={{ duration: 4, repeat: Infinity, delay: 1 }}
-                className="absolute inset-0 rounded-full border-2 border-brand/20" 
+                animate={{ scale: [1, 1.3, 1], opacity: [0.2, 0.5, 0.2] }} 
+                transition={{ duration: 5, repeat: Infinity, delay: 1 }}
+                className="absolute -inset-6 rounded-full border-2 border-brand/10 blur-md" 
               />
             </div>
-            <h4 className="text-xl font-bold mb-2">Human Peace</h4>
-            <p className="text-sm text-charcoal/50">Mirror neurons fire, parasympathetic system activates, and bond deepens.</p>
+            <h4 className="text-3xl font-bold mb-4 text-charcoal">Human Peace</h4>
+            <p className="text-lg text-charcoal/60 leading-relaxed font-medium italic">Mirror neurons fire, parasympathetic system activates, and the burden lifts.</p>
           </motion.div>
         </div>
 
         {/* Philosophy Footer */}
-        <div className="mt-20 p-8 rounded-[3rem] bg-cream/50 border border-brand-light/30 text-center max-w-3xl mx-auto">
-           <Sparkles className="text-brand w-6 h-6 mx-auto mb-4" />
-           <p className="text-lg italic text-charcoal/80 font-medium">
-             &ldquo;When they are calm, you are free. When you are calm, they feel safe.&rdquo;
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-32 p-12 rounded-[5rem] bg-gradient-to-br from-brand/10 to-transparent border border-brand/20 text-center max-w-4xl mx-auto shadow-inner relative group"
+        >
+           <div className="absolute inset-0 bg-white/40 backdrop-blur-xl rounded-[5rem] -z-10" />
+           <Sparkles className="text-brand w-10 h-10 mx-auto mb-8 animate-bounce" />
+           <p className="text-3xl italic text-charcoal tracking-tight font-medium leading-tight px-12">
+             &ldquo;When they are calm, <span className="text-brand not-italic font-bold tracking-tighter uppercase whitespace-nowrap">you are free</span>. When you are calm, they feel safe.&rdquo;
            </p>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

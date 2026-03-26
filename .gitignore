@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# internal drafts & reviews
+email_draft_to_betty.md
+technical_review.md
+AGENTS.md
+CLAUDE.md
