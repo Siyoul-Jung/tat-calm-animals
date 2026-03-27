@@ -3,7 +3,7 @@
 
 import { Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
-import MirrorSync from '@/components/MirrorSync';
+import DualResonance from '@/components/DualResonance';
 import ResonanceTool from './ResonanceTool';
 
 export default function ForYourAnimalPage() {
@@ -55,14 +55,14 @@ export default function ForYourAnimalPage() {
             </div>
           </motion.div>
           <div className="relative group">
-             <div className="aspect-square bg-brand/5 rounded-[4rem] border border-white/10 flex items-center justify-center overflow-hidden relative">
+             <div className="aspect-video bg-brand/5 rounded-[4rem] border border-white/10 flex items-center justify-center overflow-hidden relative">
                 {/* Scientific Grid Backdrop */}
                 <div className="absolute inset-0 opacity-10 pointer-events-none" 
-                     style={{ backgroundImage: 'linear-gradient(#F47216 1px, transparent 1px), linear-gradient(90deg, #F47216 1px, transparent 1px)', backgroundSize: '20px 20px' }} 
+                     style={{ backgroundImage: 'linear-gradient(#F47216 1px, transparent 1px), linear-gradient(90deg, #F47216 1px, transparent 1px)', backgroundSize: '40px 40px' }} 
                 />
                 
-                <div className="w-64 h-64 relative z-10">
-                   <MirrorSync />
+                <div className="w-full h-full max-w-sm relative z-10 p-12">
+                   <DualResonance />
                 </div>
 
                 {/* Data Points / Micro-accents */}
