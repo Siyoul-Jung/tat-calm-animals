@@ -1,9 +1,10 @@
 // src/app/for-your-animal/page.tsx
 'use client';
 
-import ResonanceTool from './ResonanceTool';
-import { Sparkles, Heart } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
+import MirrorSync from '@/components/MirrorSync';
+import ResonanceTool from './ResonanceTool';
 
 export default function ForYourAnimalPage() {
   return (
@@ -53,10 +54,20 @@ export default function ForYourAnimalPage() {
               </p>
             </div>
           </motion.div>
-          <div className="relative">
-             <div className="aspect-square bg-brand/10 rounded-[4rem] border border-white/10 flex items-center justify-center overflow-hidden">
-                <Heart className="w-32 h-32 text-brand/20 absolute animate-ping" />
-                <Heart className="w-32 h-32 text-brand relative z-10" />
+          <div className="relative group">
+             <div className="aspect-square bg-brand/5 rounded-[4rem] border border-white/10 flex items-center justify-center overflow-hidden relative">
+                {/* Scientific Grid Backdrop */}
+                <div className="absolute inset-0 opacity-10 pointer-events-none" 
+                     style={{ backgroundImage: 'linear-gradient(#F47216 1px, transparent 1px), linear-gradient(90deg, #F47216 1px, transparent 1px)', backgroundSize: '20px 20px' }} 
+                />
+                
+                <div className="w-64 h-64 relative z-10">
+                   <MirrorSync />
+                </div>
+
+                {/* Data Points / Micro-accents */}
+                <div className="absolute top-8 left-8 w-2 h-2 bg-brand rounded-full animate-pulse" />
+                <div className="absolute bottom-8 right-8 w-2 h-2 bg-brand/40 rounded-full animate-pulse delay-700" />
              </div>
           </div>
         </div>
