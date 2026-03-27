@@ -2,8 +2,9 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Heart, Wind, Sparkles, Footprints } from 'lucide-react';
+import { Wind, Sparkles, Footprints } from 'lucide-react';
 import EnergyFlow from './EnergyFlow';
+import MirrorSync from './MirrorSync';
 
 export default function HealingLoop() {
   return (
@@ -57,21 +58,10 @@ export default function HealingLoop() {
                <EnergyFlow color="#F47216" particleCount={60} />
             </div>
             
-            {/* Pulsing Core */}
-            <motion.div 
-              animate={{ 
-                scale: [1, 1.15, 1],
-                boxShadow: [
-                  "0 0 20px rgba(244,114,22,0.1)",
-                  "0 0 40px rgba(244,114,22,0.3)",
-                  "0 0 20px rgba(244,114,22,0.1)"
-                ]
-              }}
-              transition={{ duration: 3, repeat: Infinity }}
-              className="relative z-10 w-20 h-20 bg-white rounded-full shadow-2xl flex items-center justify-center border-4 border-brand/10"
-            >
-               <Heart className="w-10 h-10 text-brand fill-brand" />
-            </motion.div>
+            {/* Resonance Core - Representing Mirror Neurons */}
+            <div className="relative z-10 w-24 h-24 md:w-28 md:h-28">
+               <MirrorSync />
+            </div>
           </div>
 
           {/* Human Side */}
