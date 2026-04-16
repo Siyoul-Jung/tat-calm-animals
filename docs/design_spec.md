@@ -193,63 +193,64 @@ And they can be dissolved — gently, without reliving anything."
 
 ---
 
-### 4. For Your Animal 섹션 (다크 — 깊은 앰버)
+### 4. ForAnimals — TAT for Animals (다크 — 깊은 그린)
 
-**목적**: 동물 진입점. Mirror of Calm 개념.
+**목적**: 즉각적인 증명. TAT for Animals 프로그램 소개.
 
-**레이아웃**: 2컬럼 — 좌측 텍스트, 우측 동물 사진
+**레이아웃**: 2컬럼 — 좌측 텍스트 + CTA, 우측 YouTube 비디오 플레이어
 
 **헤딩**:
 
 ```
-"Your animal feels everything."
+"Help your animal feel more joyful, relaxed, and at peace."
 ```
 
-**본문**:
+**서브카피**:
 
 ```
-"Fear. Anxiety. The echoes of things that happened.
-TAT® helps release what your animal is carrying —
-and as they find calm, you'll feel it too."
+"TAT helped Luna reconnect with the world around her
+in a way that felt safe and joyful."
 ```
 
-**Mirror 개념** (카드 2개 나란히):
-
-```
-Their Animal                          You
-"Their heart rate slows."       "Your nervous system settles."
-"Muscles soften."               "The weight you've been carrying lifts."
-"Anxiety dissolves."            "You feel lighter too."
-```
-
-**하단 italic 라인**:
-
-```
-"When they are calm, you are free.
-When you are calm, they feel safe."
-```
+**비디오**: YouTube `UpbujaNsKKA` — 클릭 전 자동 썸네일, 클릭 시 embed 마운트  
+**CTA**: "Learn more about TAT for Animals →" → `/for-animals`  
+_실제 TAT for Animals 세션 영상으로 교체 예정 (Jez/Tapas 확인 필요) ⚠️_
 
 ---
 
-### 5. 비디오 섹션 (라이트 — Cream)
+### 5. ForPeople — Mirror of Calm + Healing ACEs Plus (다크 — 깊은 그린)
 
-**목적**: 2분짜리 경험 비디오 (현재 YouTube 플레이스홀더)
+**목적**: Mirror of Calm 개념 브릿지 → Healing ACEs Plus 프로그램 소개.
 
-**헤딩 (중앙, serif)**:
+**레이아웃**:  
+- 상단: 중앙 정렬 짧은 브릿지 텍스트 (Mirror of Calm)  
+- 골드 구분선 (w-16)  
+- 하단: 2컬럼 — 좌측 텍스트 + CTA, 우측 YouTube 비디오
+
+**Mirror 브릿지 메시지**:
 
 ```
-"Try it now — with your animal."
+"Your animal reflects what you carry.
+When they find peace — so do you."
 ```
 
-**서브헤딩**:
+**Healing ACEs Plus 헤딩**:
 
 ```
-"Play this video with your animal nearby.
-You don't need to do anything except watch and follow along."
+"Your past doesn't have to define your present."
 ```
 
-**비디오 플레이어**: 16:9, warm amber 테두리, 클릭 시 재생 (오렌지 플레이 버튼)  
-_실제 TAT for Animals 비디오로 교체 예정 (Jez/Tapas 확인 필요)_
+**Tapas 인용구** (blockquote):
+
+```
+"Healing ACEs Plus helps you gently release the beliefs
+formed in childhood — not by reliving them,
+but by allowing something new to take their place."
+```
+
+**비디오**: YouTube `zLc3k4v-hrU` — 클릭 전 자동 썸네일, 클릭 시 embed 마운트  
+**CTA**: "Learn more about Healing ACEs Plus →" → `/for-people`  
+_실제 Healing ACEs 영상으로 교체 예정 (Jez/Tapas 확인 필요) ⚠️_
 
 ---
 
