@@ -275,6 +275,7 @@ Three tables. All others handled by Stripe and Supabase Auth.
 | Tapas photos + Animals-specific images | ⚠️ Pending — can proceed without for now |
 | Animal healing stories for homepage | ⚠️ Pending Tapas / Jez |
 | Timeline and budget estimate | ⚠️ In progress — to be presented at next meeting |
+| FAQ page content — sourced from subscriber-only Vimeo FAQ video (17 Q&As transcribed). Confirm with Tapas whether this content can be used publicly on /faq page | ⚠️ Pending Tapas confirmation |
 
 ---
 
