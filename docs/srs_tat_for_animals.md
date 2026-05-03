@@ -53,6 +53,12 @@ Animal owners who want to help their animals feel calm and at ease — people wh
 
 The site follows a **minimal, experience-first** design principle. Visitors should feel something before they understand something. Every structural decision — navigation, page count, content order — serves this principle.
 
+### 1.6 Color Direction
+
+- Reference the existing tatlife.com website for color — specifically its brighter greens and oranges
+- Avoid dark, heavy tones — lean toward lighter, warmer versions of the green/orange palette
+- ⚠️ Exact color palette pending final confirmation from Tapas (April 2026)
+
 ---
 
 ## 2. Tech Stack
@@ -122,12 +128,10 @@ Returning member: Homepage → My Account → /dashboard
 
 ## 4. Membership & Pricing
 
-> ⚠️ Exact pricing, tier names, and benefits — pending Tapas confirmation
-
 | Tier | Price | Includes |
 |------|-------|---------|
-| Basic *(name TBD)* | $X/mo | TAT for Animals video library (12 videos) |
-| Premium *(name TBD)* | $X/mo | Everything in Basic + monthly live webinar access + full archive of past recordings |
+| **The Calm Library** | $27/mo | TAT for Animals video library (24 videos across 4 categories) |
+| **The Calm Circle** | $47/mo | Everything in The Calm Library + monthly live webinar access + full archive of past recordings |
 
 ---
 
@@ -144,7 +148,7 @@ Returning member: Homepage → My Account → /dashboard
 
 | Section | Function |
 |---------|---------|
-| Video Library | 12 TAT for Animals videos, accessible by subscription tier |
+| Video Library | 24 videos across 4 categories (Foundational · Main · Bonus 2025 · Bonus 2026), accessible by subscription tier |
 | Webinar Recordings | Monthly recordings added after each live session (Premium tier) |
 | Upcoming Webinars | List of upcoming webinar dates and times |
 | Subscription Management | View current plan, upgrade, cancel |
@@ -268,14 +272,17 @@ Three tables. All others handled by Stripe and Supabase Auth.
 
 | Item | Status |
 |------|--------|
-| Membership tier names | ⚠️ Pending Tapas confirmation |
-| Membership pricing | ⚠️ Pending Tapas confirmation |
-| Membership benefits — exact inclusions per tier | ⚠️ Pending Tapas confirmation |
-| Access to 12 videos — links or Vimeo access | ⚠️ Pending Tapas / Jez |
-| Tapas photos + Animals-specific images | ⚠️ Pending — can proceed without for now |
+| Membership tier names | ✅ Confirmed — The Calm Library / The Calm Circle |
+| Membership pricing | ✅ Confirmed — $27/mo / $47/mo |
+| Membership benefits — exact inclusions per tier | ✅ Confirmed — see Section 4 |
+| Access to 24 videos — Vimeo access granted | ✅ Jez added developer as Vimeo member |
+| Tapas photos + Animals-specific images | ✅ Received |
 | Animal healing stories for homepage | ⚠️ Pending Tapas / Jez |
-| Timeline and budget estimate | ⚠️ In progress — to be presented at next meeting |
-| FAQ page content — sourced from subscriber-only Vimeo FAQ video (17 Q&As transcribed). Confirm with Tapas whether this content can be used publicly on /faq page | ⚠️ Pending Tapas confirmation |
+| Timeline and budget estimate | ✅ Complete — see docs/estimate.md |
+| FAQ page content — subscriber-only video content confirmed as members-only. /faq uses rewritten foundational content instead | ✅ Resolved |
+| Recovery from Surgery — Tapas considering creating new video content on this topic | ⚠️ Pending — Tapas to confirm |
+| PayPal Business account — whether existing account can be used | ⚠️ Pending — checking with Jez |
+| Homepage intro video — 3–4 min TAT for Animals introduction | ✅ Tapas confirmed she will record this |
 
 ---
 
